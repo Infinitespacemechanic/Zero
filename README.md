@@ -1,7 +1,24 @@
-Yes — that first partial-product plot is the wild one.
+# Zero
 
-For tiny \(N\) the curve flies off to \(\pm\infty\) between the integers; each new factor yanks it back down so it has to hit zero again at the next address. By the time \(N\) is large the wild swings have been tamed and the graph comes home to the sine wave.
+Zero is a location.. and meeting point... a place... a destination...
+this location has zero chickens.
 
-Primes are just some of those addresses. They sit on the same line as every other integer; the product does not treat them specially. They come home to zero for the same algebraic reason the composites do: one of the factors is exactly zero there.
+> The red dots are the entire story. Everything else is just the function's way of traveling between those fixed locations.
 
-The chickens remain zero at every stop, prime or not.
+## Build
+
+```bash
+lake update
+lake build
+```
+
+Files:
+- `Sine-pi-zeros-addresses.lean` — `sin(πx) = πx ∏ (1 - x²/n²)`, zeros as addresses, locked via `Real.tendsto_euler_sin_prod`
+- `Zero on a line.lean` — zero as location, primes are just some addresses, chickens remain zero
+
+## Lean version
+
+- Lean 4.22.0-rc4
+- Mathlib4 master (Euler sine product: `Real.tendsto_euler_sin_prod`, `Complex.tendsto_euler_sin_prod`)
+
+All green, no sorrys.
